@@ -1,0 +1,9 @@
+.stepper-buttons {
+  margin-top: 1rem;
+}
+button {
+  margin-right: 8px;
+}
+::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
+}

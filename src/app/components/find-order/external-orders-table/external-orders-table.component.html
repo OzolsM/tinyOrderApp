@@ -1,0 +1,51 @@
+<div class="search-box">
+  <mat-form-field class="search-input">
+    <input [(ngModel)]="searchValue" matInput placeholder="Search order" autocomplete="off" (keyup)="filterOrders()">
+    <button mat-button mat-icon-button matSuffix aria-label="Clear" (click)="clearSearchInput()" *ngIf="searchValue">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<div class="mat-elevation-z8 external-orders-table">
+  <table [dataSource]="externalOrderList" mat-table class="full-width-table" aria-label="Elements">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef >Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="customer_name">
+      <th mat-header-cell *matHeaderCellDef >Customer</th>
+      <td mat-cell *matCellDef="let row">{{row.customer_name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="product_count">
+      <th mat-header-cell *matHeaderCellDef >Amount of products</th>
+      <td mat-cell *matCellDef="let row">{{row.product_count}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="order_volume">
+      <th mat-header-cell *matHeaderCellDef >Order volume</th>
+      <td mat-cell *matCellDef="let row">{{row.order_volume}}</td>
+    </ng-container>
+    <ng-container matColumnDef="sku">
+      <th mat-header-cell *matHeaderCellDef >SKU</th>
+      <td mat-cell *matCellDef="let row">{{row.sku}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row
+        *matRowDef="let row; let even = even; columns: displayedColumns;"
+        [ngClass]="{'greyRow': even}"
+        class="table-row"
+        (click)="openExternalOrder(row)"
+    >
+    </tr>
+  </table>
+
+  <mat-paginator #paginator
+                 [pageSize]="5"
+                 [pageSizeOptions]="[5, 25, 50, 100]"
+                 showFirstLastButtons>
+  </mat-paginator>
+</div>

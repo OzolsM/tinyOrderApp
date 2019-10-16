@@ -1,0 +1,46 @@
+<div class="mat-elevation-z8 external-orders-table">
+  <table [dataSource]="productsList" mat-table class="full-width-table" aria-label="Elements">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef >Product name</th>
+      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sku">
+      <th mat-header-cell *matHeaderCellDef >SKU</th>
+      <td mat-cell *matCellDef="let row">{{row.sku}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="checkbox">
+      <th mat-header-cell *matHeaderCellDef >
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()"
+                      [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? markProduct(row) : null"
+                      [checked]="selection.isSelected(row)"
+                      [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row
+        *matRowDef="let row; let even = even; columns: displayedColumns;"
+        [ngClass]="{'greyRow': even}"
+        class="table-row"
+        (click)="selection.toggle(row)"
+    >
+    </tr>
+  </table>
+
+  <mat-paginator #paginator
+                 [pageSize]="5"
+                 [pageSizeOptions]="[5, 25, 50, 100]"
+                 showFirstLastButtons>
+  </mat-paginator>
+</div>

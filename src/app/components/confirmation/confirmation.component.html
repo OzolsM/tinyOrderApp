@@ -1,0 +1,28 @@
+<h2>Order information</h2>
+<div class="confirm-products-box" *ngFor="let product of products; ">
+  <mat-form-field>
+    <input matInput placeholder="Product name" value="{{product.name}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Product type" value="{{product.type}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Amount of products" value="{{product.count}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Price" value="{{product.price}}" disabled>
+  </mat-form-field>
+</div>
+<h2>Shipping</h2>
+<div class="confirm-products-box">
+  <mat-form-field>
+    <input matInput placeholder="Customer" value="{{order.customer_name}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Address" value="{{order.customer_address}}" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Total price" value="{{totalPrice.toFixed(2)}}" disabled>
+  </mat-form-field>
+</div>
+

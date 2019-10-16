@@ -1,0 +1,15 @@
+.full-width-table {
+  width: 100%;
+}
+.external-orders-table {
+  margin-top: 0.5rem;
+}
+.greyRow {
+  background-color: #f3f3f3;
+}
+.table-row {
+  cursor: pointer;
+}
+.table-row:hover {
+  background-color: #b3b3b3;
+}

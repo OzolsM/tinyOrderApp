@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Import order</h1>
+<div mat-dialog-content>
+  <mat-horizontal-stepper linear #stepper>
+    <mat-step [editable]="isEditable">
+      <form>
+        <ng-template matStepLabel>Find order</ng-template>
+        <h3 *ngIf="selectedOrder">My orders | {{selectedOrder.id}}</h3>
+        <app-external-orders-table *ngIf="!selectedOrder" (orderSelected)="openOrder($event)"></app-external-orders-table>
+        <app-find-order-products-table *ngIf="selectedOrder" (productsSelected)="setSelectedProducts($event)" [products]="(selectedOrder ? selectedOrder.products: [] )"></app-find-order-products-table>
+        <div class="stepper-buttons" *ngIf="selectedOrder" align="end">
+          <button mat-raised-button color="warn" (click)="selectedOrder = ''">Previous</button>
+          <button mat-raised-button (click)="toProductsPrepare(stepper)">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <form>
+        <ng-template matStepLabel>Prepare products</ng-template>
+        <h3>My orders | {{selectedOrder ? selectedOrder.id : ''}}</h3>
+        <app-prepare-products (typesSelected)="checkPrepareProductsStepStatus($event)" *ngIf="selectedProducts.length" [selectedProducts]="selectedProducts"></app-prepare-products>
+        <div class="stepper-buttons" align="end">
+          <button mat-raised-button color="warn" (click)="backToFindOrder(stepper)">Previous</button>
+          <button mat-raised-button (click)="toConfirm(stepper)">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <form>
+        <ng-template matStepLabel>Confirm order</ng-template>
+        <app-confirmation [products]="selectedProducts" [totalPrice]="totalPrice" [order]="selectedOrder" *ngIf="selectedProducts.length"></app-confirmation>
+        <div class="stepper-buttons" align="end">
+          <button mat-raised-button color="warn" (click)="backToPrepareProducts(stepper)">Previous</button>
+          <button mat-raised-button (click)="confirmOrder()">Confirm order</button>
+      </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<div mat-dialog-actions align="end" *ngIf="!selectedOrder">
+  <button mat-raised-button color="warn" (click)="closeModal()">Cancel</button>
+</div>
+

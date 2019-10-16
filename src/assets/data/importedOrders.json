@@ -1,0 +1,38 @@
+[
+   {
+     "id": 1,
+     "customer": "Ted Elbow",
+     "created_at":  "20-01-2019",
+     "revenue": "5.15",
+     "cost": "10.00",
+     "price": "15.15",
+     "fulfillment": "Quality control"
+   },
+  {
+    "id": 2,
+    "customer": "Janis Tetris",
+    "created_at":  "20-05-2019",
+    "revenue": "2.50",
+    "cost": "20.00",
+    "price": "22.50",
+    "fulfillment": "In Production"
+  },
+  {
+    "id": 3,
+    "customer": "John Treehouse",
+    "created_at":  "20-01-2019",
+    "revenue": "8.01",
+    "cost": "10.01",
+    "price": "18.01",
+    "fulfillment": "Quality control"
+  },
+  {
+    "id": 4,
+    "customer": "Elsa Cucumber",
+    "created_at":  "20-06-2019",
+    "revenue": "5.15",
+    "cost": "10.00",
+    "price": "15.00",
+    "fulfillment": "Rejected"
+  }
+]

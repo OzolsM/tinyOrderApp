@@ -1,0 +1,239 @@
+[
+  {
+    "id": 1,
+    "product_count": 6,
+    "customer_name": "Eugene",
+    "customer_address": "20-201 Brivibas Street, Riga, Latvia",
+    "sku": "123",
+    "order_volume": "90.11",
+    "products": [
+      {
+        "name": "Tie",
+        "price": "30.01",
+        "sku": "Tie_1",
+        "count": 1,
+        "available_types": [
+          "penguins",
+          "spiderman",
+          "cats"
+        ]
+      },
+      {
+        "name": "Underwear",
+        "price": "15.55",
+        "sku": "Underwear_007",
+        "count": 10,
+        "available_types": [
+          "batman",
+          "bear"
+        ]
+      },
+      {
+        "name": "Cup",
+        "price": "5.05",
+        "sku": "Cup_AZ1",
+        "count": 2,
+        "available_types": [
+          "code",
+          "angular_8",
+          "riga"
+        ]
+      },
+      {
+        "name": "PC Mouse",
+        "price": "10.21",
+        "sku": "Mouse_az1234",
+        "count": 1,
+        "available_types": [
+          "ozone",
+          "logitech"
+        ]
+      },
+      {
+        "name": "Keyboard",
+        "price": "15.11",
+        "sku": "Keyboard_bz112",
+        "count": 1,
+        "available_types": [
+          "ozone",
+          "logitech"
+        ]
+      },
+      {
+        "name": "Lego",
+        "price": "14.18",
+        "sku": "Lego_444",
+        "count": 2,
+        "available_types": [
+          "SM",
+          "M",
+          "L"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "product_count": 2,
+    "customer_name": "Laura",
+    "customer_address": "34 Agenskalna Street, Riga, Latvia",
+    "sku": "1234",
+    "order_volume": "27.76",
+    "products": [
+      {
+        "name": "PC Mouse",
+        "price": "10.21",
+        "sku": "Mouse_az1234",
+        "count": 1,
+        "available_types": [
+          "ozone",
+          "logitech"
+        ]
+      },
+      {
+        "name": "Underwear",
+        "price": "15.55",
+        "sku": "Underwear_007",
+        "count": 10,
+        "available_types": [
+          "batman",
+          "bear"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "product_count": 2,
+    "customer_name": "Billy",
+    "customer_address": "21-2 Rigas Street, Jelgava, Latvia",
+    "sku": "1235",
+    "order_volume": "20.60",
+    "products": [
+      {
+        "name": "Cup",
+        "price": "5.05",
+        "sku": "Cup_AZ1",
+        "count": 2,
+        "available_types": [
+          "code",
+          "angular_8",
+          "riga"
+        ]
+      },
+      {
+        "name": "Underwear",
+        "price": "15.55",
+        "sku": "Underwear_007",
+        "count": 10,
+        "available_types": [
+          "batman",
+          "bear"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "product_count": 1,
+    "customer_name": "Ronaldo",
+    "customer_address": "22c-98 Melnsila Street, Riga, Latvia",
+    "sku": "1236",
+    "order_volume": "15.55",
+    "products": [
+      {
+        "name": "Underwear",
+        "price": "15.55",
+        "sku": "Underwear_007",
+        "count": 10,
+        "available_types": [
+          "batman",
+          "bear"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "product_count": 1,
+    "customer_name": "Scott",
+    "sku": "1237",
+    "order_volume": "30.01",
+    "products": [
+      {
+        "name": "Tie",
+        "price": "30.01",
+        "sku": "Tie_1",
+        "count": 1,
+        "available_types": [
+          "penguins",
+          "spiderman",
+          "cats"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "product_count": 2,
+    "customer_name": "Peter",
+    "customer_address": "18 Dreilinu Street, Riga, Latvia",
+    "sku": "1238",
+    "order_volume": "45.12",
+    "products": [
+      {
+        "name": "Tie",
+        "price": "30.01",
+        "sku": "Tie_1",
+        "count": 1,
+        "available_types": [
+          "penguins",
+          "spiderman",
+          "cats"
+        ]
+      },
+      {
+        "name": "Keyboard",
+        "price": "15.11",
+        "sku": "Keyboard_bz112",
+        "count": 1,
+        "available_types": [
+          "ozone",
+          "logitech"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "product_count": 2,
+    "customer_name": "Elena",
+    "customer_address": "2 Gaismas Street, Riga, Dobele",
+    "sku": "1237",
+    "order_volume": "44.19",
+    "products": [
+      {
+        "name": "Tie",
+        "price": "30.01",
+        "sku": "Tie_1",
+        "count": 1,
+        "available_types": [
+          "penguins",
+          "spiderman",
+          "cats"
+        ]
+      },
+      {
+        "name": "Lego",
+        "price": "14.18",
+        "sku": "Lego_444",
+        "count": 2,
+        "available_types": [
+          "SM",
+          "M",
+          "L"
+        ]
+      }
+    ]
+  }
+]
